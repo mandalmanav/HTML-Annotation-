@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="plugin.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+	<button value="1" onclick="changeTool(1,this)">Line</button>
+	<button value="2" onclick="changeTool(2,this)">Rect</button>
+	<button value="3" onclick="changeTool(3,this)">Circle</button>
+
+	<div id="container" class="container">
+	</div>
+	<script type="text/javascript">
+		
+$(document).ready(function(){
+$("#container").annotate();
+})
+function changeTool(value,element){
+	$(element).siblings('button').removeClass('active')
+	$(element).toggleClass('active')
+	$("#container").find('svg').trigger('changeTool',Number(value),Number(value))
+}
+	</script>
+
+	</body>
+</html>

@@ -1,0 +1,29 @@
+.container{
+  height:400px;
+  width:500px;
+  position:absolute;
+  left:300px;
+  background:green;
+}
+
+.innerContainer{
+  width:100px;
+  height:300px;
+  background:red;
+}
+
+.svgContainer{
+  position:absolute;
+  top:0px;
+  left:0px;
+  
+}
+.annotationIsSelected{
+          fill:red !important;
+          fill-opacity:0.5;
+        }
+
+button.active{
+	    background: blue;
+    opacity: 0.5;
+}
